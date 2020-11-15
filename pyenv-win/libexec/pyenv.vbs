@@ -278,7 +278,7 @@ End Sub
 
 Sub ShowHelp()
     '  WScript.echo "kkotari: pyenv.vbs show help..!"
-     WScript.Echo "pyenv " & objfs.OpenTextFile(strPyenvParent & "\.version").ReadAll
+     WScript.Echo "pyenv " & objfs.OpenTextFile(strPyenvHome & "\.version").ReadAll
      WScript.Echo "Usage: pyenv <command> [<args>]"
      WScript.Echo ""
      WScript.Echo "Some useful pyenv commands are:"

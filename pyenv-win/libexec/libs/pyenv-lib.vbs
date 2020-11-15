@@ -32,7 +32,6 @@ SetProxy
 
 Dim strCurrent
 Dim strPyenvHome
-Dim strPyenvParent
 Dim strDirCache
 Dim strDirVers
 Dim strDirLibs
@@ -41,13 +40,12 @@ Dim strDBFile
 Dim strVerFile
 strCurrent   = objfs.GetAbsolutePathName(".")
 strPyenvHome = objfs.getParentFolderName(objfs.getParentFolderName(WScript.ScriptFullName))
-strPyenvParent = objfs.getParentFolderName(strPyenvHome)
 strDirCache  = strPyenvHome & "\install_cache"
 strDirVers   = strPyenvHome & "\versions"
 strDirLibs   = strPyenvHome & "\libexec"
 strDirShims  = strPyenvHome & "\shims"
 strDBFile    = strPyenvHome & "\.versions_cache.xml"
-strVerFile   = "\.python-version"
+strVerFile   = strPyenvHome & "\.python-version"
 
 Function GetCurrentVersionGlobal()
     ' WScript.echo "kkotari: pyenv-lib.vbs get current version global..!"
