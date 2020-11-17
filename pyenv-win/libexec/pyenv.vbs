@@ -69,7 +69,6 @@ Sub ExecCommand(str)
         .CharSet = "utf-8"
         .Mode = 3 ' adModeReadWrite
         .Open
-        .WriteText("chcp 1250 > NUL" & vbCrLf)
         .WriteText(str & vbCrLf)
         .Position = 3
     End With

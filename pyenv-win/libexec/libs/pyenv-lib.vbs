@@ -188,7 +188,6 @@ Sub WriteWinScript(baseName, strDirBin)
     With objfs.CreateTextFile(strDirShims &"\"& baseName &".bat")
         .WriteLine("@echo off")
         .WriteLine("setlocal")
-        .WriteLine("chcp 1250 > NUL")
         .WriteLine("pyenv exec "&strDirBin&"%~n0 %*")
         .Close
     End With
